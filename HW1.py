@@ -78,19 +78,21 @@ class Library:
     def delete_book(self, book_title):
         self._book = [book for book in self._book if book_title != book_title]
 
-book1 = BookModel(title ='Fifth Risk', author = 'Michael Lewis', year = 2018)
-book2 = BookModel(title ='The World for Sale', author = 'Javier Blas', year = 2019)
-mag1 = JournalModel(title = 'Magaz', author = 'Nataliia', year = 2025, number=1)
-mag2 = JournalModel(title = 'The Oil Market', author = 'Javier Blas', year = 2025, number=2)
+if __name__ == "__main__":
 
-Book(book1).inform()
-Journal(mag1).inform()
+    book1 = BookModel(title ='Fifth Risk', author = 'Michael Lewis', year = 2018)
+    book2 = BookModel(title ='The World for Sale', author = 'Javier Blas', year = 2019)
+    mag1 = JournalModel(title = 'Magaz', author = 'Nataliia', year = 2025, number=1)
+    mag2 = JournalModel(title = 'The Oil Market', author = 'Javier Blas', year = 2025, number=2)
 
-book_lib = Library([])
-book_lib.add_book(book1)
-book_lib.add_book(book2)
-book_lib.add_book(mag1)
-book_lib.add_book(mag2)
+    Book(book1).inform()
+    Journal(mag1).inform()
+
+    book_lib = Library([])
+    book_lib.add_book(book1)
+    book_lib.add_book(book2)
+    book_lib.add_book(mag1)
+    book_lib.add_book(mag2)
 
 for book in book_lib:
     print(f'Book list first run: {book}')
